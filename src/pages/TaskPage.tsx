@@ -1,8 +1,15 @@
 import { useParams, useNavigate } from 'react-router-dom';
-import {
-	Box, Typography, Paper, Chip, List, ListItem,
-	ListItemText, Divider, Container, IconButton
-} from '@mui/material';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import Paper from '@mui/material/Paper';
+import Chip from '@mui/material/Chip';
+import List from '@mui/material/List';
+import ListItem from '@mui/material/ListItem';
+import ListItemText from '@mui/material/ListItemText';
+import Divider from '@mui/material/Divider';
+import Container from '@mui/material/Container';
+import IconButton from '@mui/material/IconButton';
+
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
 import FunctionsPage from './FunctionsPage';
@@ -59,7 +66,7 @@ const TaskDisplay = (opts: LabsAssignmentsOpts) => {
 		};
 
 		fetchTask();
-	}, [num, task]);
+	}, [num, task, opts.type]);
 
 	// Handle loading or error
 	if (loading) {

@@ -1,41 +1,34 @@
 // MUI Components
 
-import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
-import Grid from '@mui/material/Grid';
-import Divider from '@mui/material/Divider';
-import Paper from '@mui/material/Paper';
-import { useTheme } from '@mui/material/styles';
-import Container from '@mui/material/Container';
-import Link from '@mui/material/Link';
-// Custom Components
-
-import SectionWrapper from '../components/Section';
-import TopicsAccordion from '../components/Topic';
-import TechList from '../components/TechList';
-import CardLinks from '../components/CardLinks';
-
-// Icons 
-
 import ArticleIcon from '@mui/icons-material/Article';
-import TopicIcon from '@mui/icons-material/Topic';
-import SummarizeIcon from '@mui/icons-material/Summarize';
-import ComputerIcon from '@mui/icons-material/Computer';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BiotechIcon from '@mui/icons-material/Biotech';
-import NoteAltIcon from '@mui/icons-material/NoteAlt';
-import ContactSupportIcon from '@mui/icons-material/ContactSupport';
+import ComputerIcon from '@mui/icons-material/Computer';
 import ContactMailIcon from '@mui/icons-material/ContactMail';
-import GitHubIcon from '@mui/icons-material/GitHub';
+import ContactSupportIcon from '@mui/icons-material/ContactSupport';
 import DataObjectIcon from '@mui/icons-material/DataObject';
+import GitHubIcon from '@mui/icons-material/GitHub';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import NoteAltIcon from '@mui/icons-material/NoteAlt';
+import SummarizeIcon from '@mui/icons-material/Summarize';
+import TopicIcon from '@mui/icons-material/Topic';
+import Box from '@mui/material/Box';
+import Container from '@mui/material/Container';
+import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
+import Link from '@mui/material/Link';
+import Paper from '@mui/material/Paper';
+import { useTheme } from '@mui/material/styles';
+import Typography from '@mui/material/Typography';
 
-
-// Data 
-
+import CardLinks from '../components/CardLinks';
+import SectionWrapper from '../components/Section';
+import TechList from '../components/TechList';
+import TopicsAccordion from '../components/Topic';
 import Settings from '../data/Settings';
 import { textStyle } from '../data/Styles';
+
 
 const CP264DocsMain = () => {
 	const theme = useTheme();
