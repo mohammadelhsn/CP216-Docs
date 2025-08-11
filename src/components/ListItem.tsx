@@ -1,20 +1,19 @@
 // MUI Components
 
+import AssignmentIcon from '@mui/icons-material/Assignment';
+import BiotechIcon from '@mui/icons-material/Biotech';
+import MenuBookIcon from '@mui/icons-material/MenuBook';
+import TaskIcon from '@mui/icons-material/Task';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
-import Divider from '@mui/material/Divider';
-import Button from '@mui/material/Button';
-import AssignmentIcon from '@mui/icons-material/Assignment';
-import TaskIcon from '@mui/icons-material/Task';
-import BiotechIcon from '@mui/icons-material/Biotech';
-import MenuBookIcon from '@mui/icons-material/MenuBook';
-
-// Data
 
 import { type AssignmentItemOpts } from '../data/Data';
 import { buttonStyles, cardActionStyles, cardBodyStyles } from '../data/Styles';
+
 
 const ListItemComp = (opts: AssignmentItemOpts) => {
 	const Icon = opts.type == 'assignment' ? AssignmentIcon : opts.type == 'lab' ? BiotechIcon : opts.type == 'task' ? TaskIcon : MenuBookIcon;

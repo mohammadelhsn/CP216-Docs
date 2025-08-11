@@ -2,34 +2,21 @@
 
 import { useState, useEffect } from 'react';
 
-// Types 
-
-import type { TechItemOpts } from '@mohammadelhsn/portfolio-api-wrapper/dist/interfaces/Interfaces';
-
-// MUI Components
-
+import CodeIcon from '@mui/icons-material/Code';
+import GitHubIcon from '@mui/icons-material/GitHub';
+import TerminalIcon from '@mui/icons-material/Terminal';
 import Divider from '@mui/material/Divider';
 import List from '@mui/material/List';
 import Paper from '@mui/material/Paper';
 
-// Custom Components
-
-import TechItem from './TechItem';
 import Loading from './Loading';
+import TechItem from './TechItem';
 
-// Icons
-
-import TerminalIcon from '@mui/icons-material/Terminal';
-import CodeIcon from '@mui/icons-material/Code';
-import GitHubIcon from '@mui/icons-material/GitHub';
-
-// Types
-
+import type { TechItemOpts } from '@mohammadelhsn/portfolio-api-wrapper/dist/interfaces/Interfaces';
 import type { SvgIconComponent } from '@mui/icons-material';
 
-// Settings
-
 import Settings from '../data/Settings';
+
 
 // Tech List
 

@@ -1,18 +1,14 @@
 // MUI Components
 
+import Email from '@mui/icons-material/Email';
+import GitHub from '@mui/icons-material/GitHub';
+import LinkedIn from '@mui/icons-material/LinkedIn';
 import Box from '@mui/material/Box';
-import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
-
-// Data
+import Typography from '@mui/material/Typography';
 
 import Settings from '../data/Settings';
 
-// Icons 
-
-import LinkedIn from '@mui/icons-material/LinkedIn';
-import GitHub from '@mui/icons-material/GitHub';
-import Email from '@mui/icons-material/Email';
 
 // Footer component
 

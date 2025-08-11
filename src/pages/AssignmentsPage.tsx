@@ -1,20 +1,27 @@
+/** =========== REACT & ROUTER ============ */
 import { useNavigate } from 'react-router-dom';
 
+/** =========== MUI ICONS ============ */
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import AssignmentIcon from '@mui/icons-material/Assignment';
 import BiotechIcon from '@mui/icons-material/Biotech';
 import LightbulbIcon from '@mui/icons-material/Lightbulb';
 import ListIcon from '@mui/icons-material/List';
+
+/** =========== MUI COMPONENTS ============ */
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
+/** =========== LOCAL COMPONENTS ============ */
 import ItemList from '../components/ItemList';
 import SectionWrapper from '../components/Section';
+
+/** =========== DATA & UTILS ============ */
 import { enableFile } from '../data/Functions';
-import { textStyle } from '../data/Styles';
+import { containerStyles, textStyle } from '../data/Styles';
 import type { LabsAssignmentsOpts } from '../data/Data';
 
 // Create a page for the lab/assignment showing all the labs/assignments
@@ -24,7 +31,7 @@ const LabsAssignmentsPage = (opts: LabsAssignmentsOpts) => {
 	const isFile = enableFile(opts.type);
 	const navigate = useNavigate();
 	return (
-		<Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: { xs: 4, sm: 6 } }}>
+		<Container maxWidth="lg" sx={containerStyles}>
 			<Box sx={{ mb: 2 }}>
 				<IconButton onClick={() => navigate(-1)} aria-label="Go back">
 					<ArrowBackIcon />

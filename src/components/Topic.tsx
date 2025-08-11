@@ -2,31 +2,24 @@
 
 import { useEffect, useState } from 'react';
 
-// MUI Components
-
-import AccordionSummary from '@mui/material/AccordionSummary';
-import AccordionDetails from '@mui/material/AccordionDetails';
-import Typography from '@mui/material/Typography';
+import AutoGraphIcon from '@mui/icons-material/AutoGraph';
+import CodeIcon from '@mui/icons-material/Code';
+import PsychologyIcon from '@mui/icons-material/Psychology';
 import Accordion from '@mui/material/Accordion';
-import Divider from '@mui/material/Divider';
+import AccordionDetails from '@mui/material/AccordionDetails';
+import AccordionSummary from '@mui/material/AccordionSummary';
 import Box from '@mui/material/Box';
+import Divider from '@mui/material/Divider';
 import Paper from '@mui/material/Paper';
+import Typography from '@mui/material/Typography';
 
-// Types
+import Loading from './Loading';
+
+import Settings from '../data/Settings';
 
 import type { TopicOpts } from '@mohammadelhsn/portfolio-api-wrapper/dist/interfaces/Interfaces';
 import type { SvgIconComponent } from '@mui/icons-material';
 
-// Icons
-
-import Loading from './Loading';
-import PsychologyIcon from '@mui/icons-material/Psychology';
-import CodeIcon from '@mui/icons-material/Code';
-import AutoGraphIcon from '@mui/icons-material/AutoGraph';
-
-// Settings for API access
-
-import Settings from '../data/Settings';
 
 // Topics
 

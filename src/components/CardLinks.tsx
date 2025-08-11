@@ -2,25 +2,16 @@
 
 import { Link } from 'react-router-dom';
 
-// MUI Components
-
-import Button from '@mui/material/Button';
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
 import Divider from '@mui/material/Divider';
+import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
-
-// Data
+import Typography from '@mui/material/Typography';
 
 import { type CardTypes } from '../data/Data';
 import { getItemType } from '../data/Functions';
-
-// Settings
-
 import Settings from '../data/Settings';
-
-// Styles 
 
 import {
 	buttonStyles,
@@ -50,7 +41,7 @@ const CardLinks = (opts: CardTypes) => {
 					height: '100%',
 				}}
 			>
-				<Box sx={{ mb: 2 }}>
+				<Box mb={2}>
 					<Typography
 						variant="h4"
 						sx={textStyle}

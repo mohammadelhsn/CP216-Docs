@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 
 // Loading Page
 
-export default function Loading() {
+const Loading = () => {
     return (
         <Container maxWidth="sm">
             <Box
@@ -28,4 +28,6 @@ export default function Loading() {
             </Box>
         </Container>
     );
-}
+};
+
+export default Loading;

@@ -2,21 +2,17 @@
 
 import React from 'react';
 
-// Material UI 
-
-import Button from '@mui/material/Button';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import IconButton from '@mui/material/IconButton';
-import Box from '@mui/material/Box';
-import { styled, useTheme } from '@mui/material/styles';
-import Link from '@mui/material/Link';
-
-// Icons 
-
 import DarkModeIcon from '@mui/icons-material/DarkModeOutlined';
 import LightModeIcon from '@mui/icons-material/LightModeOutlined';
+import AppBar from '@mui/material/AppBar';
+import Box from '@mui/material/Box';
+import Button from '@mui/material/Button';
+import IconButton from '@mui/material/IconButton';
+import Link from '@mui/material/Link';
+import { styled, useTheme } from '@mui/material/styles';
+import Toolbar from '@mui/material/Toolbar';
+import Typography from '@mui/material/Typography';
+
 
 // Interfaces
 
@@ -70,19 +66,23 @@ const Header: React.FC<HeaderProps> = ({ mode, toggleColorMode }) => {
 						}}
 					/>
 				</Box>
+				{/** Home NavLink */}
 				<StyledExternalLink href="https://mohammadelhsn.github.io/">
 					<Button color="inherit">
 						Home
 					</Button>
 				</StyledExternalLink>
+				{/** Projects NavLink */}
 				<StyledExternalLink href="https://mohammadelhsn.github.io/#/projects">
 					<Button color="inherit">
 						Projects
 					</Button>
 				</StyledExternalLink>
+				{/** The Space in between the buttons */}
 				<Typography sx={{
 					flexGrow: 1,
 				}} />
+				{/** Button to toggle the theme */}
 				<IconButton
 					onClick={toggleColorMode}
 					size="small"
@@ -102,7 +102,6 @@ const Header: React.FC<HeaderProps> = ({ mode, toggleColorMode }) => {
 						<LightModeIcon sx={{ color: theme.palette.primary.main }} />
 					)}
 				</IconButton>
-
 			</Toolbar>
 		</AppBar>
 	);

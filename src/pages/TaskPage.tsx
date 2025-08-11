@@ -22,7 +22,7 @@ import BuildIcon from '@mui/icons-material/Build';
 
 import { useEffect, useState } from 'react';
 import { type LabsAssignmentsOpts } from '../data/Data';
-import { dividerStyle, sampleOutput, textStyle } from '../data/Styles';
+import { containerStyles, dividerStyle, sampleOutput, textStyle } from '../data/Styles';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
 import type { AssessmentDataType, TaskData } from '@mohammadelhsn/portfolio-api-wrapper/dist/interfaces/Interfaces';
 import Settings from '../data/Settings';
@@ -95,13 +95,13 @@ const TaskDisplay = (opts: LabsAssignmentsOpts) => {
 	}
 
 	return (
-		<Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: { xs: 4, sm: 6 } }}>
-			<Box sx={{ mb: 2 }}>
+		<Container maxWidth="lg" sx={containerStyles}>
+			<Box mb={2}>
 				<IconButton onClick={() => navigate(-1)} aria-label="Go back">
 					<ArrowBackIcon />
 				</IconButton>
 			</Box>
-			<Box sx={{ mb: 3 }}>
+			<Box mb={3}>
 				<Typography variant="h2" sx={textStyle}>
 					{taskData.name}
 				</Typography>
@@ -110,13 +110,13 @@ const TaskDisplay = (opts: LabsAssignmentsOpts) => {
 				</Typography>
 			</Box>
 			<Divider sx={dividerStyle} />
-
+			{/** Task Description */}
 			<SectionWrapper title="Description" icon={DescriptionIcon}>
 				<Paper elevation={3} sx={{ p: 2, mb: 3 }}>
 					<Typography>{taskData.description}</Typography>
 				</Paper>
 			</SectionWrapper>
-
+			{/** Task Objectives */}
 			<SectionWrapper title="Objectives" icon={ChecklistIcon}>
 				<List>
 					{taskData.objectives.map((obj, index) => (
@@ -126,13 +126,13 @@ const TaskDisplay = (opts: LabsAssignmentsOpts) => {
 					))}
 				</List>
 			</SectionWrapper>
-
+			{/** Sample Output for the Task */}
 			<SectionWrapper title="Sample Output" icon={OutputIcon}>
 				<Paper elevation={3} sx={sampleOutput}>
 					{taskData.sampleOutput}
 				</Paper>
 			</SectionWrapper>
-
+			{/** Task skills demonstrated for the Task */}
 			<SectionWrapper title="Skills Demonstrated" icon={BuildIcon}>
 				<Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
 					{taskData.skills.map((skill, index) => (

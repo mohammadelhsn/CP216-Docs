@@ -1,11 +1,16 @@
+/** =========== REACT & ROUTER ============ */
+import type { FC } from 'react';
 import { useNavigate } from 'react-router-dom';
 
+/** =========== MUI ICONS ============ */
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import BuildIcon from '@mui/icons-material/Build';
 import FunctionsIcon from '@mui/icons-material/Functions';
 import LockIcon from '@mui/icons-material/Lock';
 import NumbersIcon from '@mui/icons-material/Numbers';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+
+/** =========== MUI COMPONENTS ============ */
 import Box from '@mui/material/Box';
 import Chip from '@mui/material/Chip';
 import Container from '@mui/material/Container';
@@ -15,16 +20,24 @@ import Paper from '@mui/material/Paper';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+/** =========== LOCAL COMPONENTS ============ */
 import SectionWrapper from '../components/Section';
+
+/** =========== DATA & STYLES ============ */
 import { type FunctionPageProps } from '../data/Data';
-import { textStyle, iconStyles, dividerStyle } from '../data/Styles';
+import { containerStyles, dividerStyle, iconStyles, textStyle } from '../data/Styles';
 
-
-const FunctionsPage = (opts: FunctionPageProps) => {
+/**
+ * Renders the page for Functions & Constants.
+ *
+ * @param opts - The data to render.
+ * @returns A React functional component rendering the functions page.
+ */
+const FunctionsPage: FC<FunctionPageProps> = (opts) => {
 	const { functions = [], constants = [] } = opts;
 	const navigate = useNavigate();
 	return (
-		<Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: { xs: 4, sm: 6 } }}>
+		<Container maxWidth="lg" sx={containerStyles}>
 			<Box>
 				<IconButton onClick={() => navigate(-1)} aria-label="Go back" sx={{ mb: 1 }}>
 					<ArrowBackIcon />

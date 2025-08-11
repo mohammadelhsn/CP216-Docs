@@ -27,13 +27,13 @@ import SectionWrapper from '../components/Section';
 import TechList from '../components/TechList';
 import TopicsAccordion from '../components/Topic';
 import Settings from '../data/Settings';
-import { textStyle } from '../data/Styles';
+import { containerStyles, textStyle } from '../data/Styles';
 
 
-const CP264DocsMain = () => {
+const ClassDocsMain = () => {
 	const theme = useTheme();
 	return (
-		<Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: { xs: 4, sm: 6 } }}>
+		<Container maxWidth="lg" sx={containerStyles}>
 			<Box>
 				<Typography
 					variant="h2"
@@ -227,4 +227,4 @@ const CP264DocsMain = () => {
 	);
 };
 
-export default CP264DocsMain;
+export default ClassDocsMain;

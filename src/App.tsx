@@ -1,7 +1,7 @@
 // React
 
 import { Routes, Route, HashRouter, Navigate } from 'react-router-dom';
-import React from 'react';
+import { useMemo, useState } from 'react';
 
 // Components
 
@@ -33,7 +33,7 @@ import '@fontsource/roboto/700.css';
 
 
 const App = () => {
-	const [mode, setMode] = React.useState<'light' | 'dark'>(() => {
+	const [mode, setMode] = useState<'light' | 'dark'>(() => {
 		const stored = localStorage.getItem('colorMode');
 		return stored === 'dark' ? 'dark' : 'light';
 	});
@@ -44,7 +44,7 @@ const App = () => {
 			return nextMode;
 		});
 	};
-	const theme = React.useMemo(
+	const theme = useMemo(
 		() => (mode === 'light' ? lightTheme : darkTheme),
 		[mode]
 	);

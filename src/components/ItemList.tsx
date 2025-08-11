@@ -1,19 +1,20 @@
 import { useEffect, useState } from 'react';
-import Grid from '@mui/material/Grid';
-import Container from '@mui/material/Container';
-import Typography from '@mui/material/Typography';
-import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
-import ListItem from './ListItem';
 
+import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+import Container from '@mui/material/Container';
+import Grid from '@mui/material/Grid';
+import Typography from '@mui/material/Typography';
+
+import ListItem from './ListItem';
+import Loading from './Loading';
+
+import Settings from '../data/Settings';
 import {
 	type TaskData,
 	type ItemListOpts,
 	type AssessmentDataType,
 	type ExampleData,
 } from '../data/Data';
-
-import Settings from '../data/Settings';
-import Loading from './Loading';
 
 const ItemList = (opts: ItemListOpts) => {
 	const baseUrl =
@@ -36,7 +37,7 @@ const ItemList = (opts: ItemListOpts) => {
 					: await Settings.api.getAssignment(opts.taskStr.slice(-2));
 				if (res?.success && res.data && !Array.isArray(res.data)) {
 					const data = res.data as AssessmentDataType;
-					let taskList = [...data.tasks];
+					const taskList = [...data.tasks];
 					if (
 						data.functions &&
 						data.functions.length > 0 &&

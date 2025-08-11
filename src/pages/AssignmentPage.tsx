@@ -1,24 +1,29 @@
+/** =========== REACT & ROUTER ============ */
 import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 
-import { useParams, useNavigate } from 'react-router-dom';
-
+/** =========== MUI ICONS ============ */
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import ListIcon from '@mui/icons-material/List';
 import MenuBookIcon from '@mui/icons-material/MenuBook';
 import SentimentVeryDissatisfiedIcon from '@mui/icons-material/SentimentVeryDissatisfied';
+
+/** =========== MUI COMPONENTS ============ */
 import Box from '@mui/material/Box';
 import Container from '@mui/material/Container';
 import Divider from '@mui/material/Divider';
 import IconButton from '@mui/material/IconButton';
 import Typography from '@mui/material/Typography';
 
+/** =========== LOCAL COMPONENTS ============ */
 import ItemList from '../components/ItemList';
 import Loading from '../components/Loading';
 import SectionWrapper from '../components/Section';
-import Settings from '../data/Settings';
-import { textStyle } from '../data/Styles';
-import type { AssessmentDataType, LabsAssignmentsOpts } from '../data/Data';
 
+/** =========== DATA & STYLES ============ */
+import Settings from '../data/Settings';
+import { containerStyles, textStyle } from '../data/Styles';
+import type { AssessmentDataType, LabsAssignmentsOpts } from '../data/Data';
 
 // Lab/Assignment page for individual 
 
@@ -75,8 +80,8 @@ const LabAssignmentPage = (opts: LabsAssignmentsOpts) => {
 	}
 
 	return (
-		<Container maxWidth="lg" sx={{ px: { xs: 2, sm: 3 }, py: { xs: 4, sm: 6 } }}>
-			<Box sx={{ mb: 2 }}>
+		<Container maxWidth="lg" sx={containerStyles}>
+			<Box mb={2}>
 				<IconButton onClick={() => navigate(-1)} aria-label="Go back">
 					<ArrowBackIcon />
 				</IconButton>
