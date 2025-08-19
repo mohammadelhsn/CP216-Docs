@@ -37,7 +37,7 @@ const FunctionsPage: FC<FunctionPageProps> = (opts) => {
 	const { functions = [], constants = [] } = opts;
 	const navigate = useNavigate();
 	return (
-		<Container maxWidth="lg" sx={containerStyles}>
+		<Container maxWidth="xl" sx={containerStyles}>
 			<Box>
 				<IconButton onClick={() => navigate(-1)} aria-label="Go back" sx={{ mb: 1 }}>
 					<ArrowBackIcon />

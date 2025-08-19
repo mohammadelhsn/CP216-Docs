@@ -33,7 +33,7 @@ import { containerStyles, textStyle } from '../data/Styles';
 const ClassDocsMain = () => {
 	const theme = useTheme();
 	return (
-		<Container maxWidth="lg" sx={containerStyles}>
+		<Container maxWidth="xl" sx={containerStyles}>
 			<Box>
 				<Typography
 					variant="h2"
